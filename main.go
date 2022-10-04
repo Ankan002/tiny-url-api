@@ -15,6 +15,7 @@ func main() {
 	}
 	app := fiber.New()
 
+	config.ConnectToDB()
 	app.Use(cors.New())
 	app.Use(logger.New())
 
