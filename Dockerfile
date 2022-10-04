@@ -1,9 +1,9 @@
 FROM golang:alpine AS builder
 
+WORKDIR /usr/tiny-url-api
+
 ARG GO_ENV
 ARG PORT
-
-WORKDIR /usr/tiny-url-api
 
 COPY go.mod .
 COPY go.sum .
