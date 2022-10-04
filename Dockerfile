@@ -4,6 +4,7 @@ WORKDIR /usr/tiny-url-api
 
 ARG GO_ENV
 ARG PORT
+ARG DB_URI
 
 COPY go.mod .
 COPY go.sum .
