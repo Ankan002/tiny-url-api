@@ -7,4 +7,5 @@ import (
 
 func ShortUrlRouter(router fiber.Router) {
 	router.Post("/shorten-url", url.ShortenUrl)
+	router.Get("/redirect", url.Redirect)
 }

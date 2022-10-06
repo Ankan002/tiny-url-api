@@ -48,6 +48,17 @@ func ShortenUrl(c *fiber.Ctx) error {
 
 	requestBody.Url = helpers.EnforceHTTPS(requestBody.Url)
 
+	//TODO: Decide if we want to invoke check reachable URL function
+
+	//_, hostError := http.Get(requestBody.Url)
+	//
+	//if hostError != nil {
+	//	return c.Status(fiber.StatusBadRequest).JSON(fiber.Map{
+	//		"success": false,
+	//		"error":   "Unable to get the host of the given URL. Please provide us with a valid URL",
+	//	})
+	//}
+
 	requestBody.UrlSuggestedName = strings.TrimSpace(requestBody.UrlSuggestedName)
 
 	if requestBody.UrlSuggestedName == "" {
